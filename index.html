@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+  font-family:Arial,sans-serif; background:linear-gradient(135deg,#ffd6e7,#fff0f6,#ffd1dc);
+  overflow:hidden; color:#5a1831;
+}
+.card{
+  width:min(92%,420px); padding:30px 24px; text-align:center;
+  background:rgba(255,255,255,.88); border-radius:28px;
+  box-shadow:0 15px 45px rgba(120,30,70,.18);
+  position:relative; z-index:2;
+}
+h1{font-size:29px;margin:0 0 15px}
+p{font-size:17px;line-height:1.65;margin:10px 0}
+button{
+  border:0; border-radius:999px; padding:13px 24px; font-size:16px;
+  background:#ff5c8a;color:white; cursor:pointer; box-shadow:0 7px 18px rgba(255,92,138,.3);
+}
+#message{display:none;margin-top:20px}
+.heart{position:fixed;bottom:-30px;font-size:22px;animation:float 6s linear infinite;opacity:.75}
+@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>💖 Happy Boyfriend Day, My Love! 💖</h1>
+  <p><b>I love you 😘❤️</b></p>
+  <p>Aap mujhe pyaar karte ho ki nahi, ye mujhe nahi pata 😉<br>
+  Par main aapko bahut pyaar karti hoon 😘❤️</p>
+  <p><b>You are my life, baby 💖</b></p>
+  <p>Main chahti hoon ki aapki saari wishes puri ho 🥰<br>
+  Sabki sab! ✨<br>
+  Aur aapke saath hamesha achha hi ho ❤️</p>
+  <p>Ohh, my love 😘</p>
+  <button onclick="showLove()">Click here ❤️</button>
+  <div id="message">
+    <p>I really want to hug you and kiss you 🤭😝❤️<br>
+    Par aap mujhse door ho...</p>
+    <p>Koi na 🥰😘❤️<br>
+    Distance chahe jitna bhi ho,<br>
+    aap mere liye hamesha special rahoge. 💗</p>
+    <h2>❤️ K 💗 B ❤️</h2>
+  </div>
+</div>
+<script>
+function showLove(){
+  document.getElementById('message').style.display='block';
+  for(let i=0;i<25;i++){
+    const h=document.createElement('div');
+    h.className='heart'; h.textContent=['❤️','💗','💕','💖','🥰'][Math.floor(Math.random()*5)];
+    h.style.left=Math.random()*100+'vw';
+    h.style.animationDuration=(3+Math.random()*4)+'s';
+    h.style.fontSize=(16+Math.random()*18)+'px';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+  }
+}
+</script>
+</body>
+</html>
